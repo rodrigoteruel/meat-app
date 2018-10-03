@@ -40,7 +40,8 @@ export class OrderComponent implements OnInit {
       address: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
       number: this.formBuilder.control('', [Validators.required, Validators.pattern(this.numberPattern)]),
       optionalAddress: this.formBuilder.control(''),
-      paymentOption: this.formBuilder.control('', [Validators.required])
+      paymentOption: this.formBuilder.control('', [Validators.required]),
+      restaurant: "BURGUER HOUSE"
     }, {validator: OrderComponent.equalsTo})
   }
 
